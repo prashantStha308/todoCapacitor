@@ -17,6 +17,9 @@ workflows:
       - name: Sync Capacitor
         script: |
           npx cap sync android
+      - name: Patch Java version in capacitor-cordova-android-plugins
+        script: |
+          sed -i 's/JavaVersion.VERSION_21/JavaVersion.VERSION_17/g' android/capacitor-cordova-android-plugins/build.gradle
       - name: Build Android APK
         script: |
           cd android
