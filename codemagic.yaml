@@ -11,6 +11,7 @@ workflows:
 
       - name: Patch Java version everywhere
         script: |
+          export LC_ALL=C
           find android/ -type f -exec sed -i '' 's/JavaVersion.VERSION_21/JavaVersion.VERSION_17/g' {} +
 
       - name: Build web assets
