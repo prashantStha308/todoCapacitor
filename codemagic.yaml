@@ -3,6 +3,7 @@ workflows:
     name: Build Capacitor Android APK
     environment:
       node: 22.13.0
+      java: 17
     scripts:
       - name: Install dependencies
         script: |
